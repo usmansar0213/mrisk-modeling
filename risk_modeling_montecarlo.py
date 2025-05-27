@@ -1,16 +1,14 @@
-
 import streamlit as st
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
-import openai
-import os
-from PIL import Image
-from st_aggrid import AgGrid, GridOptionsBuilder
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
+import openai
+import os
+from PIL import Image
 
 def main():
     # Initialize session state if not already initialized
