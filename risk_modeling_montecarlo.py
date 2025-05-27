@@ -56,18 +56,13 @@ def main():
                 combined_df = pd.concat([history_data, future_data], ignore_index=True).sort_values(by='Year', ascending=False)
 
                 # Step 3: Display Combined Data
-                st.subheader("Step 3: Combined Data")
-                grid_options = GridOptionsBuilder.from_dataframe(combined_df)
-                grid_options.configure_default_column(editable=True)
-                grid_options.configure_grid_options(domLayout='normal')
-                grid_config = grid_options.build()
-                ag_response = AgGrid(
-                    combined_df,
-                    gridOptions=grid_config,
-                    update_mode='MODEL_CHANGED',
-                    allow_unsafe_jscode=True
-                )
-                combined_df = pd.DataFrame(ag_response['data']) 
+                    st.subheader("Step 3: Combined Data")
+                    st.write(
+                        "Berikut data gabungan historis dan prediksi ke depan. "
+                        "Silakan periksa dan edit (misal di Excel) jika diperlukan secara terpisah."
+                    )
+                    st.dataframe(combined_df)
+                    
 
                 # Step 4: Process Data
                 if st.button("Process Data"):
