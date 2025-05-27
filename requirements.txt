@@ -1,8 +1,8 @@
 streamlit
-numpy
 pandas
-scikit-learn
+numpy
 matplotlib
-Pillow
+scikit-learn
+pillow
 st-aggrid
 openai
