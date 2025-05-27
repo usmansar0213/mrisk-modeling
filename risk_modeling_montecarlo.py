@@ -56,12 +56,13 @@ def main():
                 combined_df = pd.concat([history_data, future_data], ignore_index=True).sort_values(by='Year', ascending=False)
 
                 # Step 3: Display Combined Data
-                    st.subheader("Step 3: Combined Data")
-                    st.write(
-                        "Berikut data gabungan historis dan prediksi ke depan. "
-                        "Silakan periksa dan edit (misal di Excel) jika diperlukan secara terpisah."
-                    )
-                    st.dataframe(combined_df)
+                st.subheader("Step 3: Combined Data")
+                st.write(
+                    "Berikut data gabungan historis dan prediksi ke depan. "
+                    "Silakan periksa dan edit (misal di Excel) jika diperlukan secara terpisah."
+                )
+                st.dataframe(combined_df)
+
                     
 
                 # Step 4: Process Data
